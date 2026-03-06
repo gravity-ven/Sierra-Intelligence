@@ -1,0 +1,22 @@
+{
+    "grid": {
+        "rows": 4,
+        "cols": 8,
+        "timeframes": ["Daily", "Weekly", "Monthly", "Yearly"],
+        "symbols": ["M2K", "MBT", "MCL", "MES", "MET", "MGC", "MNQ", "MYM"]
+    },
+    "auto_detect": {
+        "symbols_from_data": true,
+        "timeframes_from_data": false
+    },
+    "api": {
+        "host": "0.0.0.0",
+        "port": 5015
+    },
+    "scanner": {
+        "screenshot_interval": 5,
+        "confidence_threshold": 0.65,
+        "max_screenshots_per_symbol": 100
+    },
+    "_comment": "Edit timeframes and symbols to match your Sierra Chart layout."
+}

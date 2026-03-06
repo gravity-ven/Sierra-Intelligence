@@ -1,0 +1,22 @@
+{
+    "_version": "2.0",
+    "_description": "Sierra Scanner AI Pro Configuration - Enhanced for maximum accuracy",
+    "grid": {
+        "rows": 4,
+        "cols": 8,
+        "timeframes": ["Daily", "Weekly", "Monthly", "Yearly"],
+        "symbols": ["M2K", "MBT", "MCL", "MES", "MET", "MGC", "MNQ", "MYM"]
+    },
+    "auto_detect": {"symbols_from_data": true, "timeframes_from_data": false, "detect_chart_layout": true},
+    "api": {"host": "0.0.0.0", "port": 5015, "cors_enabled": true, "rate_limit": 100},
+    "scanner": {"screenshot_interval": 3, "confidence_threshold": 0.75, "max_screenshots_per_symbol": 200, "concurrent_analysis": true, "analysis_timeout": 10},
+    "ai_engine": {"use_ensemble": true, "models": ["random_forest", "gradient_boosting", "neural_network"], "voting_method": "soft", "min_samples_for_training": 50, "cross_validation_splits": 5, "min_accuracy_for_deployment": 0.65, "min_precision_for_trading": 0.70, "feature_selection": true, "auto_retrain": true, "retrain_interval_hours": 24},
+    "technical_indicators": {"extract_from_images": true, "rsi_period": 14, "macd_fast": 12, "macd_slow": 26, "macd_signal": 9, "bollinger_period": 20, "bollinger_std": 2, "atr_period": 14, "adx_period": 14, "stochastic_k": 14, "stochastic_d": 3},
+    "market_regime": {"enabled": true, "lookback_bars": 20, "volatility_percentile_high": 75, "volatility_percentile_low": 25, "trend_strength_threshold": 25, "regime_smoothing": 3},
+    "risk_management": {"use_kelly_criterion": true, "kelly_fraction": 0.5, "max_position_size_percent": 10, "stop_loss_atr_multiplier": 2.0, "take_profit_risk_reward": 2.5, "max_drawdown_percent": 10, "daily_loss_limit_percent": 5, "position_sizing_method": "kelly_half"},
+    "bayesian_calibration": {"enabled": true, "prior_alpha": 2, "prior_beta": 2, "temperature_scaling": 1.5, "min_predictions_for_calibration": 10},
+    "learning": {"pattern_memory_size": 5000, "learning_rate": 0.05, "outcome_lookback_hours": 24, "profit_threshold_for_success": 0.01, "adaptive_thresholds": true},
+    "performance_tracking": {"track_all_predictions": true, "calculate_sharpe_ratio": true, "max_drawdown_tracking": true, "win_rate_by_regime": true, "model_accuracy_tracking": true},
+    "notifications": {"high_confidence_alerts": true, "confidence_threshold_for_alert": 0.85, "regime_change_alerts": true, "drawdown_alerts": true, "drawdown_alert_threshold": 0.05},
+    "logging": {"level": "INFO", "log_predictions": true, "log_feature_importance": true, "log_model_performance": true, "retention_days": 30}
+}
